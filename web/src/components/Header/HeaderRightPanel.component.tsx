@@ -4,11 +4,11 @@ import { useLocation } from 'react-router-dom'
 import { Status, StatusCssColorClass } from './Status'
 import Icon from '../Icon/Icon'
 import Avatar from '../Avatar/Avatar'
-import useOnClickOutside from 'use-onclickoutside'
 import { CSSTransition } from 'react-transition-group'
 import { ProjectMapViewOnly } from '../ViewFilters/ViewFilters'
 import Typography from '../Typography/Typography'
 import hashCodeId from '../../api/clientSideIdHash'
+import onClickOutside from 'react-onclickoutside'
 
 function AvatarMenuItem({
   title,
@@ -96,8 +96,9 @@ export default function HeaderRightPanel({
   unselectAll,
   projectId,
 }) {
-  const ref = useRef<HTMLDivElement>(null)
-  useOnClickOutside(ref, () => {
+  const ref = useRef()
+  //@ts-ignore
+  onClickOutside(ref, () => {
     setIsAvatarMenuOpen(false)
     setIsStatusOpen(false)
   })

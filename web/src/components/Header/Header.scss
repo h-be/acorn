@@ -1,6 +1,15 @@
 .header-wrapper {
   width: 100%;
 
+.acorn-we-applet .header-wrapper {
+  position: absolute;
+}
+
+.header {
+  margin: 8px;
+  display: flex;
+  justify-content: space-between;
+}
   // &.has-background {
   //   background-color: var(--bg-color-tertiary);
   // }

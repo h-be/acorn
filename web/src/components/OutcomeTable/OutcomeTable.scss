@@ -45,3 +45,9 @@
     padding-bottom: 3rem;
   }
 }
+
+.acorn-we-applet .outcome-table-wrapper {
+  .outcome-table-rows {
+    overflow-y: unset;
+  }
+}

@@ -124,3 +124,11 @@
     }
   }
 }
+
+.acorn-we-applet .ev-details-wrapper {
+  overflow-y: unset;
+
+  textarea {
+    overflow: hidden;
+  }
+}

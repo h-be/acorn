@@ -233,3 +233,9 @@
     }
   }
 }
+
+.acorn-we-applet .tag-picker-wrapper {
+  .tag-picker-list-wrapper {
+    overflow-y: unset;
+  }
+}

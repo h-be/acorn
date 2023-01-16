@@ -33,11 +33,19 @@
   z-index: 2;
 }
 
+.acorn-we-applet .expanded-view-overlay {
+  position: absolute;
+}
+
 .breadcrumbs-overlay {
   position: fixed;
   top: 0.5rem;
   left: 1rem;
   z-index: 3;
+}
+
+.acorn-we-applet .breadcrumbs-overlay {
+  position: absolute;
 }
 
 // breadcrumbs css transitions (animation)

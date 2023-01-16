@@ -45,3 +45,9 @@
     margin-bottom: 0.5rem;
   }
 }
+
+.acorn-we-applet .expanded-view-right-column-wrapper {
+  .ev-right-column-inner-wrapper {
+    overflow: unset;
+  }
+}
