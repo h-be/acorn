@@ -1,7 +1,7 @@
 {
   "name": "acorn-workspace",
   "packageManager": "yarn@1.22.19",
-  "version": "9.9.0",
+  "version": "11.0.5",
   "private": true,
   "workspaces": {
     "packages": [
@@ -34,7 +34,11 @@
     "download-happs": "bash scripts/download-happs.sh",
     "build": "bash scripts/build.sh",
     "storybook": "yarn workspace acorn-ui storybook",
-    "postinstall": "yarn run download-happs"
+    "zip-we-applet": "cd web/dist && bestzip ../dist.zip *",
+    "build-webhapp": "bash scripts/build-webhapp.sh",
+    "postinstall": "yarn run download-happs && yarn workspace zod-models run build && yarn workspace acorn run tsc",
+    "dev-we": "cd we-applet && yarn dev-we",
+    "dev-we2": "cd we-applet && yarn dev-we2"
   },
   "author": "Connor Turland <connor@sprillow.com>",
   "license": "CAL-1.0",
@@ -42,6 +46,7 @@
     "pm2": "^5.1.1"
   },
   "devDependencies": {
+    "bestzip": "^2.2.1",
     "typescript": "^5.1.6"
   },
   "resolutions": {
